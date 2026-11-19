@@ -1,0 +1,317 @@
+{
+  "http://freetestcase12345.xyz/login": {
+    "verdict": "MALICIOUS",
+    "confidence": 95.0,
+    "reason": "Suspicious domain, cheap TLD, and unencrypted HTTP protocol used for a login endpoint."
+  },
+  "https://scrimba.com/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate and well-known platform for interactive coding tutorials."
+  },
+  "https://scrimba.com/learn-react-c0e": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Legitimate online learning platform hosting an authentic React coding course."
+  },
+  "https://scrimba.com/whats-new-in-react-19-c03d": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate web development learning platform hosting a React 19 tutorial article."
+  },
+  "https://www.coursera.org/learn/learn-react": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate domain and standard URL structure for an official Coursera course."
+  },
+  "https://www.propeers.in/": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate domain for an established mentorship platform with standard URL structure."
+  },
+  "https://www.propeers.in/webinar/crack-faang-aug2026-nishant?utm_source=organic&utm_medium=email-admin&utm_campaign=nishant-webinar-aug-18th": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate mentorship platform hosting a webinar with standard marketing tracking parameters."
+  },
+  "https://www.quora.com/qemail/tc?al_imp=eyj0exblijogmzmsicjoyxnoijogijeymtg1ntqxndm2otm0ntazmtd8mxwxmhwynte1njg1njqifq%3d%3d&al_pri=0&aoid=rssr6stygbh&aoty=4&aty=4&cp=1&et=2&id=6aa747660e8a49d7a7b5e5c0ad31fb63&uid=3hfmnoeiser": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate link on official Quora domain with standard email tracking parameters."
+  },
+  "https://www.quora.com/qemail/tc?al_imp=eyj0exblijogmzmsicjoyxnoijogijeymtg1ntqxndm2otm0ntazmtd8nhwxfde0nzc3ndm5mtmznzc4odcifq%3d%3d&al_pri=0&aoid=aia6hnyzfn6&aoty=1&aty=4&cp=4&et=2&id=6aa747660e8a49d7a7b5e5c0ad31fb63&uid=3hfmnoeiser": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Legitimate Quora domain using standard email link tracking parameters."
+  },
+  "https://www.quora.com/qemail/tc?aoid&aoty=7&aty=4&cp=0&et=2&id=6aa747660e8a49d7a7b5e5c0ad31fb63&uid=3hfmnoeiser&al_pri=8": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official Quora email tracking link on the legitimate quora.com domain."
+  },
+  "https://www.quora.com/qemail/tc?al_imp=eyj0exblijogmzmsicjoyxnoijogijeymtg1ntqxndm2otm0ntazmtd8nnwxfdmymzcwnjizosj9&al_pri=0&aoid=dvgpntved0j&aoty=1&aty=4&cp=6&et=2&id=6aa747660e8a49d7a7b5e5c0ad31fb63&uid=3hfmnoeiser": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Legitimate Quora email tracking link on official quora.com domain."
+  },
+  "https://www.quora.com/qemail/tc?al_imp=eyj0exblijogmzmsicjoyxnoijogijeymtg1ntqxndm2otm0ntazmtd8ohwxfde0nzc3ndm5mdk4nzywotyifq%3d%3d&al_pri=0&aoid=bapkbsfqe1f&aoty=1&aty=4&cp=8&et=2&id=6aa747660e8a49d7a7b5e5c0ad31fb63&uid=3hfmnoeiser": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate Quora email tracking URL on official quora.com domain."
+  },
+  "https://8lrhz0km.r.ap-south-1.awstrack.me/l0/https:%2f%2fsupport.sadhguru.org%2foffering%2finner-engineering/1/0109019fc84bb140-cf6f7cc2-2dcd-4806-9356-1ed044231983-000000/ybj-uvibn-aurw9yktdefssayuu=258": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate AWS SES email tracking link redirecting to authentic Sadhguru foundation domain."
+  },
+  "https://8lrhz0km.r.ap-south-1.awstrack.me/l0/https:%2f%2fwww.instagram.com%2fsadhguru/1/0109019fc84bb140-cf6f7cc2-2dcd-4806-9356-1ed044231983-000000/pd8zhfguylytyqidfajjxenzeey=258": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate AWS SES email tracking link redirecting to official Instagram page."
+  },
+  "https://ftuwy-zgpm.maillist-manage.in/click/12d8e64cd579fcdc/12d8e64cd57879bf": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate Zoho Campaigns email marketing click-tracking domain with standard URL structure."
+  },
+  "https://cm.naukri.com/?data=%7b%22devicetype%22%3a%22web%22%2c%22additionalparams%22%3a%7b%7d%2c%22campaignid%22%3a%226118%22%2c%22communicationid%22%3a%226a858f4af1aa40c05463087f%22%2c%22clickposition%22%3a1%2c%22communicationtype%22%3a%22mail%22%2c%22templateid%22%3a%22153886%22%2c%22journeyid%22%3a%222546_20260819%22%2c%22encrecipientid%22%3a%221789%3afpydu6b08mbwn1eh1fb60n8tm5kfwiwyqwn8iobxxa%2bnrig6l2v15lz7%22%2c%22userid%22%3a%2241563c4d75b2dee59b694366ebca4b0f93f52e0be53bad19113f03cb115cb3db%22%2c%22eventcode%22%3a%222546_cg_active_audience_journey_cg_active_audience_start_1ba1_mail%22%2c%22encemail%22%3a%229446af0b37ebcfd05b02d8f886a132ce2ea4247454e5b5faeb3c54d736381b74ff003c62a2e1a36431b890266d0ecd01%22%2c%22mailtype%22%3a%22mmm_promotional%22%2c%22recipienttype%22%3a%22jobseeker%22%2c%22provider%22%3a%22emailpostfixsmtpprovidercampusbulk-notifync%22%2c%22mailerid%22%3a%221215139%22%2c%22segmentid%22%3a%22134220%22%2c%22appid%22%3a456%2c%22tenantid%22%3a%221%22%2c%22parentactivityid%22%3a%22582944%22%2c%22eventname%22%3a%22communicationclick%22%2c%22inittime%22%3a1787137866882%2c%22parentjourneyid%22%3a%222546%22%7d&redirect=https%3a%2f%2fwww.naukri.com%2fcampus%2fcareer-guidance%2f%3fp%3d2283%26utm_campaign%3dcg_active_audience_campaign%26utm_medium%3demail%26utm_content%3d2546_cg_active_audience_journey_cg_active_audience_start_1ba1%26utm_term%3d1215139%26utm_source%3dmail": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Legitimate email tracking URL from Naukri.com redirecting to an official Naukri web page."
+  },
+  "https://cm.naukri.com/?data=%7b%22devicetype%22%3a%22web%22%2c%22additionalparams%22%3a%7b%7d%2c%22campaignid%22%3a%226118%22%2c%22communicationid%22%3a%226a858f4af1aa40c05463087f%22%2c%22clickposition%22%3a3%2c%22communicationtype%22%3a%22mail%22%2c%22templateid%22%3a%22153886%22%2c%22journeyid%22%3a%222546_20260819%22%2c%22encrecipientid%22%3a%221789%3afpydu6b08mbwn1eh1fb60n8tm5kfwiwyqwn8iobxxa%2bnrig6l2v15lz7%22%2c%22userid%22%3a%2241563c4d75b2dee59b694366ebca4b0f93f52e0be53bad19113f03cb115cb3db%22%2c%22eventcode%22%3a%222546_cg_active_audience_journey_cg_active_audience_start_1ba1_mail%22%2c%22encemail%22%3a%229446af0b37ebcfd05b02d8f886a132ce2ea4247454e5b5faeb3c54d736381b74ff003c62a2e1a36431b890266d0ecd01%22%2c%22mailtype%22%3a%22mmm_promotional%22%2c%22recipienttype%22%3a%22jobseeker%22%2c%22provider%22%3a%22emailpostfixsmtpprovidercampusbulk-notifync%22%2c%22mailerid%22%3a%221215139%22%2c%22segmentid%22%3a%22134220%22%2c%22appid%22%3a456%2c%22tenantid%22%3a%221%22%2c%22parentactivityid%22%3a%22582944%22%2c%22eventname%22%3a%22communicationclick%22%2c%22inittime%22%3a1787137866882%2c%22parentjourneyid%22%3a%222546%22%7d&redirect=https%3a%2f%2fwww.naukri.com%2fcampus%2fcareer-guidance%2f%3fp%3d4734%26utm_campaign%3dcg_active_audience_campaign%26utm_medium%3demail%26utm_content%3d2546_cg_active_audience_journey_cg_active_audience_start_1ba1%26utm_term%3d1215139%26utm_source%3dmail": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Legitimate tracking URL for Naukri redirecting safely to its official website."
+  },
+  "https://track.simplilearnmailer.com/f/a/wrlaadur1cwtmpixo98mfa~~/aar0exa~/j_stbwqooo91_evfswmutcvh59bqyitt0hpbt2t9kgmhggkfcptlckhcz3kxxhekv7511guioxnneoeubisugdtp6lay9tyvoaphwzstfyywqg4yeck7anqvqknirk_1uxel9i34qzk8a01kilgub01d2brbzrutme2mfonmmtl9b8lrmi1w8pai0s-e2wjovoeaxhif5xdrxyb9xwekyjirhdqnryapmrgip7m95bnxgupn3g-mhs3ffa7rwzjhxylme0h2p_tphlayxxmxdaogwovbmjyjxzcznxxudilbbkshvtvchkpzzgnsnol7ggjaehl5wolma4s7el7sz1lpkjgtfj7rqhp4-v_r3kmao2qsagfmuzyklnw-umdc2sphqkrbiud-la7i414p4fhewolda8zdp47lunksvdej0guamsll4cavjrpleewkkzr93-ipxxlek6lfhomoynre11xlyigg6cph4t6oqxevhazrqnlvg6kfu2p9ty_-z7pgbthgpfhoanbsbbbngokfwicohz2clhri0wklwejbd02xtjuxdgmj_tteirmijuforsfsj39vf5o9etvdiqt2cg58ikrt2qcjxdah4mzq29nkwwai7vfdyp-6d_2cwmgsk4xbtpckyhi_x9gfjnclyhiyjsvybszzgg5vbehkdopw37nticmgwccu_dciyf5kroyxgkunu63v8hnmn7u1npks4pxnxs2r3ck378-ftdyak5b6cnyixw1pirbpgcgcz2cz5dadhi2koorrmtj5hgohdnpgss211i9fi9aic2ycsnd-er_tizw0cw1v3oxcw2bqkue3mmuu0bemxt1bikpppgq4hhihzfkcambar9ybzmorbizvxruyhctzpih3j10uqqmfuvmu4uywhg~~": {
+    "verdict": "SAFE",
+    "confidence": 92.0,
+    "reason": "Legitimate email link tracking domain used by Simplilearn for marketing communications."
+  },
+  "https://click.sfmc.edx.org/?qs=abb7inyiojesimqiojq5nzj9aaoaaaaaa_ctgdjf-lwf-wgrtlsidkb4dnmhsf5eduwpq4wplj4nol7trz3swvd0glnaqm9886pcxwcwnzg7uzrpsrkfasm5oeqdpznqrgr7h8f1ow": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate edX subdomain used for Salesforce Marketing Cloud email link tracking."
+  },
+  "http://email.postmaster.hackerrankmail.com/c/ejxmzl9uhdamgpgnsuzkoysbwuoxe42tiezc-suwkvxtq3aobvugn77cfupcxhlzf0mxeoi-cmphszqpw0idjkqxtih9itjbqun9zasuiaeaedukdquccbaspqhtg1wl53hbjrfp1vqzf70u2zdn5ruzj82vxm3o24uprw9hj6rr-eb-zmwf34fnvxz5yv5manfc639h_jtp0-1cxfsjgbp_yvojaad__9nxqno": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Official transactional email domain owned and used by HackerRank for legitimate communications."
+  },
+  "https://ssjanakalyantrust.org/ssj/apply.html": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate trust website structure with standard application path and no brand impersonation."
+  },
+  "https://ssjanakalyantrust.org/ssj/sch_app26/student/applicationview/20260005594": {
+    "verdict": "SAFE",
+    "confidence": 85.0,
+    "reason": "Legitimate non-profit trust website hosting a standard scholarship application portal URL."
+  },
+  "https://ssjanakalyantrust.org/ssj/sch_app26/student/logout": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate trust domain with standard student portal logout path structure."
+  },
+  "https://ssjanakalyantrust.org/ssj/sch_app26/student/applicationformdownload/20260005594": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate non-profit domain hosting a student scholarship application download portal."
+  },
+  "https://www.sitaramjindalfoundation.org/scholarships-for-students-in-bangalore.php": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Official domain of a legitimate non-profit organization providing genuine scholarship information."
+  },
+  "https://app.sitaramjindalfoundation.org/": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Official domain for Sitaram Jindal Foundation with standard portal subdomain structure."
+  },
+  "huggingface.co": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official domain for Hugging Face, a legitimate AI and machine learning platform."
+  },
+  "https://in.indeed.com/rc/clk/dl?jk=db9cb4ceb2f07f8d&from=ja&qd=rnzhmybxsk4m3qttvgxwowfzu7da3-v1jtovg3mnkcdzm8w2esderkxhfvzre3d3hol53hjps66fyhbywhabxdmph1tpg4kf8_yljw-8x07i12zdtbvq8kehsasjv72u&rd=ahaf72zdihptgqsdvrpp6zxef5nkbupq3hkiyxcdpdm&tk=1k0b024nd25cs001&alid=6a66202fa4b7e221443f4627&bb=qrww5qq0oeyovvipahkqcc6a3x2pfs66cb65io2rckszgiw0isofcr185ioykbfl6ppvp1epkkgm58nvtey6hxtlz6ga_suxifgte34uo-fx_qzye5h29tzutzhd5jmhgl1uf1isbtuywckfqb7-6a%3d%3d&tmtk=1k0b024nd25cs001": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Official job alert tracking link on legitimate Indeed domain."
+  },
+  "https://c.gle/aopydkqkmz6beben3nrmb9e2pb3vltq4bioyicgfsq4epzp7gjwtx4kceocnbnlygyt4_6c6c3_4m5qrbzcxupn_q8ccqsichecw25f2w_hyezxcd0ybvwovbibmw9eqxd1akucjcee4dv0vl1r0omb2-5v0duootjeguez2komqhufznvkraj5hlbxo14v9odxewbrzyipxfpztp5coeohamo10i7_qrdhnp_p1ybtyka18nar2rrani6jm2scxzettukxcl1fjsh0gfkxv5n9eki79metqfsdsdhzyg1ckphtujk4_g5ugkrh3af78i2ysvvsizvoj04jmhtqc82h-28mzln-rfpcefenkja6qydvcc6mwdgd95abamacguapn0ngjrfx6llsbuxcojxxm6djncrsuhthxe-uy1uuo5tbreac3srd7ca": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Official Google-owned short link domain on the restricted .gle top-level domain."
+  },
+  "https://ajioapps.onelink.me/1622090911?pid%5cu003demail": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate AppsFlyer deep link domain used by Ajio for app tracking."
+  },
+  "https://forms.gle/c3qzcheeysrdpv6v6": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Official Google Forms URL belonging to a legitimate, well-known service."
+  },
+  "https://futureinterns.com/submission/": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Standard domain structure with no indicators of brand impersonation or phishing risk."
+  },
+  "https://et.internshala.com/cl0/https:%2f%2ftrainings.internshala.com%2f%3futm_source=is_web_student_digest/1/0109019d7d041231-980a2bab-96a3-41a9-b3ad-4136b0d04765-000000/9ymn4z5-jvt3puoog0iksehswblj5wnp77bdo3f_yv4=254": {
+    "verdict": "SAFE",
+    "confidence": 98.0,
+    "reason": "Official email tracking link hosted on legitimate domain internshala.com redirecting to internal trainings."
+  },
+  "https://et.internshala.com/cl0/https:%2f%2finternshala.com%2finternship%2fdetail%2fwork-from-home-full-stack-developer-ai-product-automation-internship-at-dobby-ads1775819244%3futm_source=student_digest%26utm_medium=super_active_student%26utm_campaign=2026-04-11%26referral=student_digest_active/1/0109019d7d041231-980a2bab-96a3-41a9-b3ad-4136b0d04765-000000/pnrrhgashxnq3cdc77fkcgidsn-wyydchvysxdtzbbq=254": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate subdomain and email tracking link pointing to official Internshala domain."
+  },
+  "https://et.internshala.com/cl0/https:%2f%2finternshala.com%2finternship%2fdetail%2fwork-from-home-python-developer-serverless-internship-at-across-the-globe-atg1775795013%3futm_source=student_digest%26utm_medium=super_active_student%26utm_campaign=2026-04-11%26referral=student_digest_active/1/0109019d7d041231-980a2bab-96a3-41a9-b3ad-4136b0d04765-000000/_-cfvlhvu7ysjzcldfjtuo1oltdxt7x4cpeh7vnflsu=254": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Legitimate email tracking URL hosted on an official subdomain of Internshala."
+  },
+  "https://et.internshala.com/cl0/https:%2f%2finternshala.com%2finternship%2fdetail%2fwork-from-home-web-development-internship-at-tripple-one-solutions1775801463%3futm_source=student_digest%26utm_medium=super_active_student%26utm_campaign=2026-04-11%26referral=student_digest_active/1/0109019d7d041231-980a2bab-96a3-41a9-b3ad-4136b0d04765-000000/n37stablet_ja5kni4jclhfthdcmi6ryxzrhi-l4n5y=254": {
+    "verdict": "SAFE",
+    "confidence": 95.0,
+    "reason": "Official email tracking URL on legitimate domain pointing to valid internal page."
+  },
+  "paypal-secure-login-verify.tk": {
+    "verdict": "MALICIOUS",
+    "confidence": 100.0,
+    "reason": "Impersonates PayPal using suspicious verification keywords on an unofficial .tk domain."
+  },
+  "https://claude.ai/chat/83797a90-309e-4b33-ae53-b2ae9a8d1141": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official domain for Anthropic's Claude AI service with standard chat URL structure."
+  },
+  "github.com": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official domain of a well-known legitimate software development platform."
+  },
+  "192.168.45.99/account/verify.php": {
+    "verdict": "MALICIOUS",
+    "confidence": 95.0,
+    "reason": "Uses a raw IP address with an account verification path typical of phishing."
+  },
+  "http://paypal-secure-login-verify.tk": {
+    "verdict": "MALICIOUS",
+    "confidence": 100.0,
+    "reason": "Deceptive PayPal brand impersonation using keywords on a suspicious free TLD."
+  },
+  "http://amaz0n-security-alert.xyz/confirm": {
+    "verdict": "MALICIOUS",
+    "confidence": 100.0,
+    "reason": "Typosquatting domain impersonating Amazon using a suspicious TLD to target users."
+  },
+  "https://ftuwy-zgpm.maillist-manage.in/click/12d8e64cd8bd3252/12d8e64cd8af8559": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate Zoho Campaigns email tracking link on an official service domain."
+  },
+  "https://delivery.unstop.buzz/rpsjfohy?id=194419=ik0hcqgnvvubhw9twawaaa1vbg4abqihc11xb1mpagfycqcnvqfyxaxxawmfvfadaf1kxarxvgiaavrxawsouamed1kjcwnrcvqgbqchugucv1aouadqvwmbbqiedq4hbwudwqqkbwzdvwqkuawiawnqueuabg0bba4pxv0kbftsaaunbkujeewtrqhoglvvwaxaxenig0nds0ilfrzufxtlggphaisidytvdqhrtuyh&fl=cuvdseidtktvdfntvkzfxboerlacaqyyxldtcgjzuqdpulhvhk9qs10ov1snvl1zvw4=&ext=ct1qz3vxm3vwdtdhnfddcdhesthickzouujosunkohlcbkrxrerkms4xsknbodlcvwjhus1zmwk0sc5jzuflzvfgeldrvdbxn2npevf2dfhirgtuee8wmgh1venznwvrrgjfy0nnq3h0v0e3cw9kajrxdhy1stjxd2dqejf0vkr6efzlu28xr2x5su1ndwzpblaxemmzuuzfqxewavrwyjb2sdquq3bws1fhme5usjlmck5wdnjgstzwzkznzvvibnvrus1rs2qxzdhou2vazu56nhhpx2zrn3vvzlllu0uzvxvgz3z5zwh2ekh3clljzc5urvzjlkvavnzxdjhiqxpmvmlnouxyvuhjywztdy00metlyjleazl1y0vjufngnnvqwg1ctw5ulm9vrwk1slo0aw5frlfdbwdrbml6umrbtgjlzxh3qmkxdum5cxozm3bbrlzvewmux1d1lvv1vkxkog1qai5ib3y1werazk9xogzmvf9jmfphsxdsslhsnjjcbw1poeuwluxjt2rdn291wtl0qtdwqjlru0gxy3ven3dorwxiqlfpotdeujlprmi3c2rouuwxsg5zmvrhyul6evjpvm5aeglov1rqeunrz192uzflzdzuqndxmzrvt0zsc3vqvhnqvznvow1dx2thevpfctexs3ouegnlmdrwmm1ty1hsnxpem043zvlpv1q3djz5dv93t19cbur5mgq0yjrryw40ulvksfpsx0ozrdzmsnjmegu2ejltzjfjrzh5vgoxyzvudg9zbk1pqmh6desytfzjrddqz2nwclhnmnr1tzu1etdozuw3zvywyjjitxfrnjfkdfjism5wc3bar2zlchzcsldeefjceehfuxdvakzkyufunlpitvlwvlh0u2i2qxpzc0tnsuiwags=": {
+    "verdict": "MALICIOUS",
+    "confidence": 95.0,
+    "reason": "Suspicious TLD, brand impersonation of Unstop, and heavily obfuscated tracking parameters."
+  },
+  "http://microsoft-account-verify-secure.tk/login": {
+    "verdict": "MALICIOUS",
+    "confidence": 100.0,
+    "reason": "Impersonates Microsoft using a suspicious lookalike domain with a .tk TLD over HTTP."
+  },
+  "https://g7vj56wj.r.ap-south-1.awstrack.me/l0/https:%2f%2fwww.sbiashascholarship.co.in%2f/1/010901a08f2e9bc8-caa9fb85-d28a-4416-9d84-917ecc53b2b4-000000/9qqxw0ffjs92kpuc2uyzkjegmc0=258": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Standard Amazon SES email tracking link redirecting to a legitimate scholarship portal."
+  },
+  "https://www.sbiashascholarship.co.in/privacy-policy": {
+    "verdict": "MALICIOUS",
+    "confidence": 90.0,
+    "reason": "Unofficial domain using SBI brand name to impersonate official scholarship portal."
+  },
+  "https://www.sbiashascholarship.co.in/auth": {
+    "verdict": "MALICIOUS",
+    "confidence": 95.0,
+    "reason": "Impersonates State Bank of India Asha Scholarship on an unofficial domain."
+  },
+  "https://www.sbiashascholarship.co.in/auth?mode=signup": {
+    "verdict": "MALICIOUS",
+    "confidence": 90.0,
+    "reason": "Deceptive domain impersonating State Bank of India scholarship program on an unofficial domain."
+  },
+  "http://freeshipping-orderconfirm.tk/track": {
+    "verdict": "MALICIOUS",
+    "confidence": 95.0,
+    "reason": "Suspicious TLD, generic keywords, and unencrypted HTTP indicate high phishing risk."
+  },
+  "https://www.paypal.com/in/business": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official PayPal domain with standard localized path for business services."
+  },
+  "https://www.malwarebytes.com/blog/detections/appspot-com": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate blog article on official Malwarebytes domain discussing security detections."
+  },
+  "https://testsafebrowsing.appspot.com/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official Google Safe Browsing test site hosted on Google App Engine."
+  },
+  "https://testsafebrowsing.appspot.com/s/phishing.html": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official Google Safe Browsing benign test URL used to verify phishing protection."
+  },
+  "https://testsafebrowsing.appspot.com/s/bad_login.html": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official Google Safe Browsing test URL used safely for security testing purposes."
+  },
+  "https://www.ilovepdf.com/compress_pdf": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Well-known legitimate website for PDF compression with authentic domain and URL structure."
+  },
+  "https://openphish.com/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate cybersecurity threat intelligence platform and official domain."
+  },
+  "http://securebank-loginportal-update.cf/verify": {
+    "verdict": "MALICIOUS",
+    "confidence": 98.0,
+    "reason": "Suspicious free TLD, HTTP protocol, and brand impersonation keywords indicate a phishing threat."
+  },
+  "https://claude.ai/chat/16eb8647-b226-4a85-ba19-46c499f7fc93": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official Anthropic Claude AI domain with standard chat session URL path."
+  },
+  "https://claude.ai/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Official domain for Anthropic's Claude AI assistant."
+  },
+  "blob:https://lovable.dev/520b8527-a477-4f3f-8b28-888fe6a8b46e": {
+    "verdict": "SAFE",
+    "confidence": 90.0,
+    "reason": "Legitimate blob URL generated on the official lovable.dev platform."
+  },
+  "https://leetcode.com/contest/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate well-known domain for coding challenges using a standard path structure."
+  },
+  "https://leetcode.com/": {
+    "verdict": "SAFE",
+    "confidence": 100.0,
+    "reason": "Legitimate domain for a well-known online coding and interview preparation platform."
+  }
+}
