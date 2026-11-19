@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+﻿from dotenv import load_dotenv
 load_dotenv(override=True)
 
 import os
@@ -18,14 +18,14 @@ from urllib.parse import urlparse
 
 import google.generativeai as genai
 
-# ── Init app ──
+# ΓöÇΓöÇ Init app ΓöÇΓöÇ
 app = FastAPI(
     title="CyberShield API",
     description="AI-Based Cyber Threat Detection System",
     version="1.1.0"
 )
 
-# ── CORS — allows Chrome extension and React to call this API ──
+# ΓöÇΓöÇ CORS ΓÇö allows Chrome extension and React to call this API ΓöÇΓöÇ
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -33,7 +33,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Load models ──
+# ΓöÇΓöÇ Load models ΓöÇΓöÇ
 print("Loading models...")
 rf_model  = joblib.load("../models/random_forest.pkl")
 print("MODEL EXPECTS:", list(rf_model.feature_names_in_))
@@ -49,9 +49,9 @@ with open("../models/metrics.json") as f:
 
 RF_WEIGHT  = config["rf_weight"]
 XGB_WEIGHT = config["xgb_weight"]
-print("✅ Models loaded!")
+print("Γ£à Models loaded!")
 
-# ── Gemini setup ──
+# ΓöÇΓöÇ Gemini setup ΓöÇΓöÇ
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
@@ -59,7 +59,7 @@ gemini_model = None
 
 # Cache Gemini results so the same URL is not sent repeatedly.
 # Persisted to disk (../models/gemini_cache.json) so cached results survive
-# a server restart — important the night before a demo with a limited
+# a server restart ΓÇö important the night before a demo with a limited
 # free-tier quota.
 GEMINI_CACHE_FILE = "../models/gemini_cache.json"
 GEMINI_CACHE = {}
@@ -67,16 +67,16 @@ if os.path.exists(GEMINI_CACHE_FILE):
     try:
         with open(GEMINI_CACHE_FILE) as f:
             GEMINI_CACHE = json.load(f)
-        print(f"✅ Loaded {len(GEMINI_CACHE)} cached Gemini results from disk")
+        print(f"Γ£à Loaded {len(GEMINI_CACHE)} cached Gemini results from disk")
     except Exception as e:
-        print(f"⚠️ Could not load Gemini cache file: {e}")
+        print(f"ΓÜá∩╕Å Could not load Gemini cache file: {e}")
 
 def _save_gemini_cache():
     try:
         with open(GEMINI_CACHE_FILE, "w") as f:
             json.dump(GEMINI_CACHE, f, indent=2)
     except Exception as e:
-        print(f"⚠️ Could not save Gemini cache file: {e}")
+        print(f"ΓÜá∩╕Å Could not save Gemini cache file: {e}")
 
 # If Gemini reaches its quota, disable further NEW calls (cached URLs still work)
 GEMINI_QUOTA_EXCEEDED = False
@@ -85,14 +85,14 @@ if GEMINI_API_KEY:
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         gemini_model = genai.GenerativeModel(GEMINI_MODEL_NAME)
-        print(f"✅ Gemini configured ({GEMINI_MODEL_NAME})")
+        print(f"Γ£à Gemini configured ({GEMINI_MODEL_NAME})")
     except Exception as e:
-        print(f"⚠️ Gemini setup failed: {e}")
+        print(f"ΓÜá∩╕Å Gemini setup failed: {e}")
         gemini_model = None
 else:
-    print("⚠️ GEMINI_API_KEY not set — ML-only mode")
+    print("ΓÜá∩╕Å GEMINI_API_KEY not set ΓÇö ML-only mode")
 
-# ── Brand mismatch config — must match step2_features.ipynb exactly ──
+# ΓöÇΓöÇ Brand mismatch config ΓÇö must match step2_features.ipynb exactly ΓöÇΓöÇ
 BRAND_DOMAINS = {
     "paypal": ["paypal.com"],
     "amazon": ["amazon.com", "amazon.co.uk", "amazon.de"],
@@ -122,7 +122,7 @@ def has_brand_mismatch(url, netloc):
                 return 1
     return 0
 
-# ── Feature extraction — must match step2_features.ipynb exactly ──
+# ΓöÇΓöÇ Feature extraction ΓÇö must match step2_features.ipynb exactly ΓöÇΓöÇ
 def extract_features(url):
     features = {}
     try:
@@ -180,7 +180,7 @@ def extract_features(url):
             features[key] = 0
     return features
 
-# ── Gemini AI reasoning ──
+# ΓöÇΓöÇ Gemini AI reasoning ΓöÇΓöÇ
 def ask_llm_for_verdict(url: str):
     """
     Ask Gemini to independently assess a URL.
@@ -201,15 +201,15 @@ def ask_llm_for_verdict(url: str):
     # Normalize URL for caching
     cache_key = url.strip().lower()
 
-    # Return cached result if this URL was already analyzed — checked BEFORE
+    # Return cached result if this URL was already analyzed ΓÇö checked BEFORE
     # the quota check, so URLs tested earlier still work even after quota runs out
     if cache_key in GEMINI_CACHE:
-        print("✅ Using cached Gemini result")
+        print("Γ£à Using cached Gemini result")
         return GEMINI_CACHE[cache_key]
 
     # Stop sending NEW requests after quota has been exceeded
     if GEMINI_QUOTA_EXCEEDED:
-        print("⚠️ Gemini quota exhausted — using ML result only")
+        print("ΓÜá∩╕Å Gemini quota exhausted ΓÇö using ML result only")
         return None
 
     prompt = f"""
@@ -234,7 +234,7 @@ Respond with ONLY valid JSON in exactly this format:
 """
 
     try:
-        print(f"🤖 Asking Gemini about: {url}")
+        print(f"≡ƒñû Asking Gemini about: {url}")
 
         response = gemini_model.generate_content(
             prompt,
@@ -250,7 +250,7 @@ Respond with ONLY valid JSON in exactly this format:
         match = re.search(r"\{.*\}", raw_text, re.DOTALL)
 
         if not match:
-            print("⚠️ Gemini returned invalid JSON")
+            print("ΓÜá∩╕Å Gemini returned invalid JSON")
             return None
 
         parsed = json.loads(match.group(0))
@@ -258,7 +258,7 @@ Respond with ONLY valid JSON in exactly this format:
         verdict = str(parsed.get("verdict", "")).upper()
 
         if verdict not in ("SAFE", "MALICIOUS"):
-            print("⚠️ Gemini returned invalid verdict")
+            print("ΓÜá∩╕Å Gemini returned invalid verdict")
             return None
 
         confidence = float(parsed.get("confidence", 50))
@@ -290,7 +290,7 @@ Respond with ONLY valid JSON in exactly this format:
             GEMINI_QUOTA_EXCEEDED = True
 
             print(
-                "⚠️ Gemini quota exceeded. "
+                "ΓÜá∩╕Å Gemini quota exceeded. "
                 "Gemini will be disabled for this server session."
             )
 
@@ -299,14 +299,14 @@ Respond with ONLY valid JSON in exactly this format:
         # Temporary Gemini/network failure
         if "503" in error_message or "timeout" in error_message.lower():
             print(
-                "⚠️ Gemini temporarily unavailable. "
+                "ΓÜá∩╕Å Gemini temporarily unavailable. "
                 "Continuing with ML result."
             )
 
             return None
 
         # Any other Gemini failure
-        print(f"⚠️ Gemini call failed: {e}")
+        print(f"ΓÜá∩╕Å Gemini call failed: {e}")
         return None
 
 def combine_verdicts(ml_verdict, ml_confidence, llm_result):
@@ -324,7 +324,7 @@ def combine_verdicts(ml_verdict, ml_confidence, llm_result):
             "agreement": None,
             "ai_verdict": None,
             "ai_confidence": None,
-            "ai_reason": "AI reasoning unavailable — showing ML model result only.",
+            "ai_reason": "AI reasoning unavailable ΓÇö showing ML model result only.",
         }
 
     llm_verdict = llm_result["verdict"]
@@ -349,11 +349,11 @@ def combine_verdicts(ml_verdict, ml_confidence, llm_result):
         "ai_reason": llm_reason,
     }
 
-# ── Auto-log confirmed malicious URLs — for future dataset expansion ──
+# ΓöÇΓöÇ Auto-log confirmed malicious URLs ΓÇö for future dataset expansion ΓöÇΓöÇ
 # Only logs when BOTH the ML ensemble AND Gemini independently agree it's
 # malicious (agreement=True). This deliberately excludes the ML-alone case,
 # since real-world testing showed the ML model can be confidently wrong on
-# modern/unusual legitimate sites (huggingface.co, quora.com, etc.) —
+# modern/unusual legitimate sites (huggingface.co, quora.com, etc.) ΓÇö
 # logging those would poison future training data with false positives.
 # Writes to a separate review file, NOT directly into raw_urls.csv, so a
 # human can review before promoting entries into the actual training set.
@@ -376,14 +376,14 @@ def log_confirmed_malicious(url: str, ml_confidence: float,
             ])
     except Exception as e:
         # Never let logging failures affect the actual classification response
-        print(f"⚠️ Could not log confirmed malicious URL: {e}")
+        print(f"ΓÜá∩╕Å Could not log confirmed malicious URL: {e}")
 
-# ── Request model ──
+# ΓöÇΓöÇ Request model ΓöÇΓöÇ
 class URLRequest(BaseModel):
     url: str
     user_email: str | None = None
 
-# ── Routes ──
+# ΓöÇΓöÇ Routes ΓöÇΓöÇ
 @app.get("/")
 def root():
     return {
@@ -419,11 +419,11 @@ def classify_url(request: URLRequest):
         "whatsapp.com", "telegram.org", "spotify.com", "discord.com",
         "quora.com", "coursera.org", "scrimba.com",
         "huggingface.co", "biet.ac.in", "propeers.in", "internshala.com",
-        "zoom.us", "slack.com", "chatgpt.com", "openai.com", "anthropic.com"
+        "zoom.us", "slack.com", "chatgpt.com", "openai.com", "anthropic.com","leetcode.com", "codeforces.com", "codechef.com", "hackerrank.com", "hackerearth.com",
     ]
 
     try:
-        hostname = urlparse(url).hostname or ""
+        hostname = urlparse(url if url.startswith("http") else "http://" + url).hostname or ""
         hostname = hostname.replace("www.", "")
         if any(hostname == d or hostname.endswith("." + d) for d in TRUSTED):
             return {
@@ -441,11 +441,30 @@ def classify_url(request: URLRequest):
     except Exception:
         pass
 
-    # ── Not whitelisted: run ML ensemble ──
+    # Not whitelisted: run ML ensemble
     feat = extract_features(url)
-    feat_array = pd.DataFrame([feat])
 
-    rf_proba  = rf_model.predict_proba(feat_array)[0][1]
+    # Prepare only the 11 features used during model training
+    parsed_url = urlparse(
+        url if url.startswith("http") else "http://" + url
+    )
+
+    model_features = {
+        "url_length": feat["url_length"],
+        "hostname_length": len(parsed_url.hostname or ""),
+        "count_dots": feat["num_dots"],
+        "count_hyphens": feat["num_hyphens"],
+        "count_at": feat["num_at"],
+        "count_question": feat["num_question"],
+        "count_equal": feat["num_equals"],
+        "count_digits": feat["num_digits"],
+        "count_percent": feat["num_percent"],
+        "count_slashes": feat["num_slashes"],
+        "uses_https": feat["has_https"]
+    }
+
+    feat_array = pd.DataFrame([model_features])
+    rf_proba = rf_model.predict_proba(feat_array)[0][1]
     xgb_proba = xgb_model.predict_proba(feat_array)[0][1]
     print(f"RF says: {rf_proba}, XGB says: {xgb_proba}")
 
@@ -459,11 +478,11 @@ def classify_url(request: URLRequest):
         ml_verdict = "MALICIOUS"
         ml_confidence = round(final_proba * 100, 2)
 
-    # ── Not whitelisted: also ask Gemini, independently ──
+    # Not whitelisted: also ask Gemini, independently
     llm_result = ask_llm_for_verdict(url)
     combined = combine_verdicts(ml_verdict, ml_confidence, llm_result)
 
-    verdict    = combined["verdict"]
+    verdict = combined["verdict"]
     confidence = combined["confidence"]
     prediction = 0 if verdict == "SAFE" else 1
 
@@ -499,7 +518,7 @@ def classify_url(request: URLRequest):
         reasons = ["URL pattern matches known safe structure"] \
             if prediction == 0 else ["URL pattern matches malicious structure"]
 
-    # ── Print the ML model's reasoning to the terminal for malicious verdicts ──
+    # Print the ML model's reasoning to the terminal for malicious verdicts
     if prediction == 1:
         print(f"🔍 Why flagged {verdict} (ml_confidence={ml_confidence}%):")
         for r in reasons[:5]:
@@ -509,38 +528,38 @@ def classify_url(request: URLRequest):
         from email_alert import send_threat_alert
         send_threat_alert(url, verdict, confidence, reasons[:5], recipient=request.user_email)
 
-        # Auto-log to the dataset review file, but ONLY when ML and AI
-        # independently agree — see log_confirmed_malicious() docstring
-        # for why ML-alone verdicts are deliberately excluded.
+        # Auto-log only when ML and AI independently agree.
         if combined.get("agreement") is True:
             log_confirmed_malicious(
-                url, ml_confidence,
-                combined.get("ai_confidence"), confidence
+                url,
+                ml_confidence,
+                combined.get("ai_confidence"),
+                confidence
             )
 
     return {
-        "url":            url,
-        "verdict":        verdict,
-        "confidence":     confidence,
-        "prediction":     prediction,
-        "reasons":        reasons[:5],
-        "ml_verdict":     ml_verdict,
-        "ml_confidence":  ml_confidence,
-        "ai_verdict":     combined.get("ai_verdict"),
-        "ai_confidence":  combined.get("ai_confidence"),
-        "ai_reason":      combined.get("ai_reason"),
-        "agreement":      combined.get("agreement"),
+        "url": url,
+        "verdict": verdict,
+        "confidence": confidence,
+        "prediction": prediction,
+        "reasons": reasons[:5],
+        "ml_verdict": ml_verdict,
+        "ml_confidence": ml_confidence,
+        "ai_verdict": combined.get("ai_verdict"),
+        "ai_confidence": combined.get("ai_confidence"),
+        "ai_reason": combined.get("ai_reason"),
+        "agreement": combined.get("agreement"),
         "features": {
-            "url_length":         feat["url_length"],
-            "has_https":          feat["has_https"],
-            "num_dots":           feat["num_dots"],
-            "suspicious_words":   feat["suspicious_words"],
-            "suspicious_tld":     feat["suspicious_tld"],
-            "has_ip":             feat["has_ip"],
+            "url_length": feat["url_length"],
+            "has_https": feat["has_https"],
+            "num_dots": feat["num_dots"],
+            "suspicious_words": feat["suspicious_words"],
+            "suspicious_tld": feat["suspicious_tld"],
+            "has_ip": feat["has_ip"],
             "has_brand_mismatch": feat["has_brand_mismatch"],
         }
     }
 
-# ── Run ──
+# ΓöÇΓöÇ Run ΓöÇΓöÇ
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

@@ -5,7 +5,7 @@ import {
 } from "recharts";
 import axios from "axios";
 
-const API = "http://localhost:8000";
+const API = "http://127.0.0.1:8000";
 
 const FEED = [
   { url: "paypal-secure-login.ru/auth/verify", type: "PHISHING", conf: 97 },
