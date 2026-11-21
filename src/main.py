@@ -83,7 +83,7 @@ GEMINI_QUOTA_EXCEEDED = False
 
 if GEMINI_API_KEY:
     try:
-        genai.configure(api_key=GEMINI_API_KEY)
+        genai.configure(api_key=GEMINI_API_KEY, transport="rest")
         gemini_model = genai.GenerativeModel(GEMINI_MODEL_NAME)
         print(f"Γ£à Gemini configured ({GEMINI_MODEL_NAME})")
     except Exception as e:
@@ -241,7 +241,8 @@ Respond with ONLY valid JSON in exactly this format:
             generation_config={
                 "temperature": 0.1,
                 "max_output_tokens": 1024
-            }
+            },
+            request_options={"timeout": 10, "retry": None}
         )
 
         raw_text = response.text.strip()
@@ -444,26 +445,11 @@ def classify_url(request: URLRequest):
     # Not whitelisted: run ML ensemble
     feat = extract_features(url)
 
-    # Prepare only the 11 features used during model training
-    parsed_url = urlparse(
-        url if url.startswith("http") else "http://" + url
+        # All 34 features, in the same order the models were trained on
+    feat_array = pd.DataFrame([feat]).reindex(
+        columns=list(rf_model.feature_names_in_), fill_value=0
     )
-
-    model_features = {
-        "url_length": feat["url_length"],
-        "hostname_length": len(parsed_url.hostname or ""),
-        "count_dots": feat["num_dots"],
-        "count_hyphens": feat["num_hyphens"],
-        "count_at": feat["num_at"],
-        "count_question": feat["num_question"],
-        "count_equal": feat["num_equals"],
-        "count_digits": feat["num_digits"],
-        "count_percent": feat["num_percent"],
-        "count_slashes": feat["num_slashes"],
-        "uses_https": feat["has_https"]
-    }
-
-    feat_array = pd.DataFrame([model_features])
+    
     rf_proba = rf_model.predict_proba(feat_array)[0][1]
     xgb_proba = xgb_model.predict_proba(feat_array)[0][1]
     print(f"RF says: {rf_proba}, XGB says: {xgb_proba}")
